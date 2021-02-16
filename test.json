@@ -1,1 +1,393 @@
-test
+{
+  "title": "INL OCI Pilot",
+  "description": "# Description\n__Created 2021-2-9 12:18:32__\n\n--------------------------------------\n\n",
+  "created": "2021-2-9 12:25:41",
+  "updated": "2021-2-9 12:33:14",
+  "okit_version": "0.16.0",
+  "compartments": [
+    {
+      "id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "compartment_id": null,
+      "display_name": "prod",
+      "name": "prod",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "description": "okit-comp001"
+    }
+  ],
+  "customer_premise_equipments": [],
+  "autonomous_databases": [],
+  "block_storage_volumes": [],
+  "database_systems": [
+    {
+      "id": "okit.databasesystem.90c9c532-b753-4b64-800d-7b7f3f608136",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "rac1",
+      "name": "rac1",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "availability_domain": 1,
+      "database_edition": "ENTERPRISE_EDITION_EXTREME_PERFORMANCE",
+      "db_home": {
+        "database": {
+          "admin_password": "DHNAnRg78c#Wq4eh50Y-dQu2W3-Jyv",
+          "db_name": "ds001",
+          "db_workload": "OLTP"
+        },
+        "db_version": "21.0.0.0"
+      },
+      "hostname": "rac1",
+      "shape": "VM.Standard1.16",
+      "ssh_public_keys": "",
+      "subnet_id": "okit.subnet.8e5b6a09-cd83-4e2b-a5a1-c1e8cb0d57a0",
+      "backup_network_nsg_ids": [],
+      "backup_subnet_id": "",
+      "cluster_name": "",
+      "cpu_core_count": "0",
+      "data_storage_percentage": 80,
+      "data_storage_size_in_gb": 256,
+      "db_system_options": {
+        "storage_management": "ASM"
+      },
+      "disk_redundancy": "",
+      "domain": "",
+      "fault_domains": [
+        "FAULT-DOMAIN-1",
+        "FAULT-DOMAIN-3"
+      ],
+      "license_model": "BRING_YOUR_OWN_LICENSE",
+      "node_count": "2",
+      "nsg_ids": [],
+      "source": "NONE",
+      "sparse_diskgroup": false,
+      "time_zone": "+00:00"
+    },
+    {
+      "id": "okit.databasesystem.8846023d-8b0e-4b02-b9a5-3f5f905a5ede",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "rac2",
+      "name": "rac2",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "availability_domain": 1,
+      "database_edition": "ENTERPRISE_EDITION_EXTREME_PERFORMANCE",
+      "db_home": {
+        "database": {
+          "admin_password": "DHNAnRg78c#Wq4eh50Y-dQu2W3-Jyv",
+          "db_name": "ds001",
+          "db_workload": "OLTP"
+        },
+        "db_version": "21.0.0.0"
+      },
+      "hostname": "rac2",
+      "shape": "VM.Standard1.16",
+      "ssh_public_keys": "",
+      "subnet_id": "okit.subnet.8e5b6a09-cd83-4e2b-a5a1-c1e8cb0d57a0",
+      "backup_network_nsg_ids": [],
+      "backup_subnet_id": "",
+      "cluster_name": "",
+      "cpu_core_count": "0",
+      "data_storage_percentage": 80,
+      "data_storage_size_in_gb": 256,
+      "db_system_options": {
+        "storage_management": "ASM"
+      },
+      "disk_redundancy": "",
+      "domain": "",
+      "fault_domains": [
+        "FAULT-DOMAIN-1",
+        "FAULT-DOMAIN-3"
+      ],
+      "license_model": "BRING_YOUR_OWN_LICENSE",
+      "node_count": "2",
+      "nsg_ids": [],
+      "source": "NONE",
+      "sparse_diskgroup": false,
+      "time_zone": "+00:00"
+    },
+    {
+      "id": "okit.databasesystem.e6a9ec42-c684-40f0-b070-498b68e89402",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "rac3",
+      "name": "rac3",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "availability_domain": 1,
+      "database_edition": "ENTERPRISE_EDITION_EXTREME_PERFORMANCE",
+      "db_home": {
+        "database": {
+          "admin_password": "DHNAnRg78c#Wq4eh50Y-dQu2W3-Jyv",
+          "db_name": "ds001",
+          "db_workload": "OLTP"
+        },
+        "db_version": "21.0.0.0"
+      },
+      "hostname": "rac3",
+      "shape": "VM.Standard1.16",
+      "ssh_public_keys": "",
+      "subnet_id": "okit.subnet.8e5b6a09-cd83-4e2b-a5a1-c1e8cb0d57a0",
+      "backup_network_nsg_ids": [],
+      "backup_subnet_id": "",
+      "cluster_name": "",
+      "cpu_core_count": "0",
+      "data_storage_percentage": 80,
+      "data_storage_size_in_gb": 256,
+      "db_system_options": {
+        "storage_management": "ASM"
+      },
+      "disk_redundancy": "",
+      "domain": "",
+      "fault_domains": [
+        "FAULT-DOMAIN-1",
+        "FAULT-DOMAIN-3"
+      ],
+      "license_model": "BRING_YOUR_OWN_LICENSE",
+      "node_count": "2",
+      "nsg_ids": [],
+      "source": "NONE",
+      "sparse_diskgroup": false,
+      "time_zone": "+00:00"
+    }
+  ],
+  "dynamic_routing_gateways": [],
+  "fast_connects": [],
+  "file_storage_systems": [],
+  "instances": [
+    {
+      "id": "okit.instance.63c4e837-881f-4ee9-bbe2-1acd51470860",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "bastion",
+      "name": "bastion",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "availability_domain": "1",
+      "shape": "VM.Standard.E3.Flex",
+      "count": 1,
+      "fault_domain": "",
+      "agent_config": {
+        "is_monitoring_disabled": false,
+        "is_management_disabled": false
+      },
+      "vnics": [
+        {
+          "subnet_id": "okit.subnet.2de9c487-3732-492c-9c5a-45637d8ab60d",
+          "assign_public_ip": true,
+          "nsg_ids": [],
+          "skip_source_dest_check": false,
+          "hostname_label": "bastion1"
+        }
+      ],
+      "source_details": {
+        "os": "Oracle Linux",
+        "version": "7.8",
+        "boot_volume_size_in_gbs": "50",
+        "source_type": "image"
+      },
+      "metadata": {
+        "ssh_authorized_keys": "",
+        "user_data": ""
+      },
+      "block_storage_volume_ids": [],
+      "object_storage_bucket_ids": [],
+      "autonomous_database_ids": [],
+      "preserve_boot_volume": false,
+      "is_pv_encryption_in_transit_enabled": false,
+      "primary_vnic": {
+        "subnet_id": "okit.subnet.2de9c487-3732-492c-9c5a-45637d8ab60d",
+        "assign_public_ip": true,
+        "nsg_ids": [],
+        "skip_source_dest_check": false,
+        "hostname_label": "bastion1"
+      }
+    }
+  ],
+  "instance_pools": [],
+  "internet_gateways": [
+    {
+      "id": "okit.internetgateway.ab48e4ae-a558-49ab-9605-8f6ddc8d2e31",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "okit-ig001",
+      "name": "",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "enabled": true
+    }
+  ],
+  "ipsec_connections": [],
+  "load_balancers": [],
+  "local_peering_gateways": [],
+  "mysql_database_systems": [],
+  "nat_gateways": [],
+  "network_security_groups": [],
+  "object_storage_buckets": [],
+  "oke_clusters": [],
+  "remote_peering_connections": [],
+  "route_tables": [
+    {
+      "id": "okit.routetable.ab8ac084-8a67-4234-8961-eec4e9ed2bc2",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "okit-rt001",
+      "name": "",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "route_rules": []
+    }
+  ],
+  "security_lists": [
+    {
+      "id": "okit.securitylist.e244d6de-f2f8-4cb7-9077-93fe530af882",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "okit-sl001",
+      "name": "",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "egress_security_rules": [
+        {
+          "destination": "0.0.0.0/0",
+          "destination_type": "CIDR_BLOCK",
+          "is_stateless": false,
+          "protocol": "all",
+          "description": ""
+        }
+      ],
+      "ingress_security_rules": [
+        {
+          "is_stateless": false,
+          "protocol": "6",
+          "source": "0.0.0.0/0",
+          "source_type": "CIDR_BLOCK",
+          "tcp_options": {
+            "destination_port_range": {
+              "max": 22,
+              "min": 22
+            },
+            "source_port_range": {}
+          },
+          "description": ""
+        },
+        {
+          "icmp_options": {
+            "code": 4,
+            "type": 3
+          },
+          "is_stateless": false,
+          "protocol": "1",
+          "source": "0.0.0.0/0",
+          "source_type": "CIDR_BLOCK",
+          "description": ""
+        },
+        {
+          "icmp_options": {
+            "type": 3
+          },
+          "is_stateless": false,
+          "protocol": "1",
+          "source": "10.0.0.0/16",
+          "source_type": "CIDR_BLOCK",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "service_gateways": [],
+  "subnets": [
+    {
+      "id": "okit.subnet.693ee280-9835-4f2f-8318-bb7525ee5bc7",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "prod-mw-subnet",
+      "name": "prod-mw-subnet",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "cidr_block": "10.0.0.0/24",
+      "dns_label": "sn001",
+      "prohibit_public_ip_on_vnic": false,
+      "route_table_id": "",
+      "security_list_ids": [],
+      "availability_domain": "0",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    },
+    {
+      "id": "okit.subnet.8e5b6a09-cd83-4e2b-a5a1-c1e8cb0d57a0",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "prod-db-subnet",
+      "name": "prod-db-subnet",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "cidr_block": "10.0.1.0/24",
+      "dns_label": "sn002",
+      "prohibit_public_ip_on_vnic": true,
+      "route_table_id": "",
+      "security_list_ids": [],
+      "availability_domain": "0",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    },
+    {
+      "id": "okit.subnet.5ccaf6d2-3744-4edf-84a8-b20908add10d",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "prod-ss-subnet",
+      "name": "prod-ss-subnet",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "cidr_block": "10.0.2.0/24",
+      "dns_label": "sn003",
+      "prohibit_public_ip_on_vnic": true,
+      "route_table_id": "",
+      "security_list_ids": [],
+      "availability_domain": "0",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    },
+    {
+      "id": "okit.subnet.2de9c487-3732-492c-9c5a-45637d8ab60d",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "prod-lz-subnet",
+      "name": "prod-lz-subnet",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "cidr_block": "10.0.3.0/24",
+      "dns_label": "sn004",
+      "prohibit_public_ip_on_vnic": false,
+      "route_table_id": "",
+      "security_list_ids": [],
+      "availability_domain": "0",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    }
+  ],
+  "virtual_cloud_networks": [
+    {
+      "id": "okit.virtualcloudnetwork.fadcba0c-3d83-4725-818d-3ab443083169",
+      "compartment_id": "okit.compartment.f351e378-9a0c-4576-8c52-3e8bc169b84a",
+      "display_name": "prod-vcn",
+      "name": "prod-vcn",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "cidr_block": "10.0.0.0/16",
+      "dns_label": "vcn001",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    }
+  ]
+}
