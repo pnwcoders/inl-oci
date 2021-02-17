@@ -200,21 +200,21 @@ OTHER (In OCI > Identity)
 
 TO MAKE OKIT WORK WITH US GOV TENANCY
 
-I found four additional files with oraclecloud hard-coded (didn't change them at this time).
+  I found four additional files with oraclecloud hard-coded (didn't change them at this time).
 
        /okit/oci-designer-toolkit/okitweb/templates/reference_architecture/sql_server.json
        /okit/oci-designer-toolkit/visualiser/model/bom.py
        /okit/oci-designer-toolkit/visualiser/model/calculator.py
        /okit/oci-designer-toolkit/visualiser/model/okit_price_v2.py
 
-Summary of my changes to make Resource Manager, Connection, and Console work with US Govt tenancy
+  Summary of my changes to make Resource Manager, Connection, and Console work with US Govt tenancy
 
-1.	Change key file to use ~/.okit vs absolute path
+  1.	Change key file to use ~/.okit vs absolute path
 
        First vi /root/.oci/config and make the above change
        Then cp /root/.oci/config /okit/oci-designer-toolkit/containers/oci/config
 
-2.	added regions to (top) of /okit/oci-designer-toolkit/okitweb/static/okit/json/dropdown.json
+  2.	added regions to (top) of /okit/oci-designer-toolkit/okitweb/static/okit/json/dropdown.json
 
        {
        "display_name": "US Gov East",
@@ -229,13 +229,19 @@ Summary of my changes to make Resource Manager, Connection, and Console work wit
        "name": "us-luke-1"
        },
 
-3.	Changed "oci_href" in js/okit_designer.js to include gov
+  3.	Changed "oci_href" in js/okit_designer.js to include gov
 
        let oci_href = https://console.${jsonBody.name}.oraclegovcloud.com;
 
-4.	Destroy | Rebuild
+  4.	Destroy | Rebuild OKIT Container
 
        destroyed old docker build with cd /okit/oci-designer-toolkit/containers/docker ; docker-compose stop ; docker-compose rm ; docker rmi okit
        make a new docker build with docker-compose up --detach ; docker-compose top
 
-5.	Clear Browser history
+  5.	Clear Browser history
+
+CHANGE TIMEZONE on the server from GMT to MST
+
+       rm /etc/localtime
+       ln -s /usr/share/zoneinfo/MST /etc/localtime
+       date
