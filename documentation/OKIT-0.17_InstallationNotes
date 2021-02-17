@@ -1,0 +1,241 @@
+CREATE COMPUTE INSTANCE
+
+  Inputs
+
+   okit_v0_17
+    inlpilot (root)
+    OEL 7.9
+    AMD VM.Standard.E3.Flex (1 core OCPU, 16 GB memory, 1 Gbps NIC)
+    vcn-oki
+    subnet-oki
+    Assign a public IPv4
+    Generate SSH key pair
+      - Save Private Key
+      - Save Public Key
+
+  Outputs
+
+    xxx.xx.xx.xxx
+    opc
+
+CONNECT TO THE NEW INSTANCE
+
+  puTTy
+
+    Copy ssh-key-YYYY-MM-DD.key
+         ssh-key-YYYY-MM-DD.key.pub
+    from Downloads to C:\Users\XXXXXX\Documents\oci\ssh_keys\okit_v0_17
+
+    Open puTTy Key Generator
+      -- Move "old keys" to old_keys
+      -- Load ssh-key-YYYY-MM-DD.key
+      -- Save as .ppk
+
+    Validate
+      -- IP Address (see outputs)
+      -- Username (see outputs)
+      -- Private Key File
+      -- Tunnel Source Port (e.g. xxxx)
+                Destination (127.0.0.1:80)
+
+    Login
+      -- sudo su -
+
+INSTALL OKIT
+
+  Update System
+
+    yum -y update
+    yum -y groupinstall "Development Tools"
+    yum -y install gcc wget openssl-devel bzip2-devel libffi-devel python-devel
+
+  Install PIP (Package Installer for Python)
+
+    /usr/bin/easy_install pip
+
+  Install Python3
+
+    curl -O https://www.python.org/ftp/python/3.6.5/Python-3.6.5.tgz
+    tar -xvzf Python-3.6.5.tgz
+    cd Python-3.6.5
+      ./configure
+      make
+      make install
+      python3 --version
+        Python 3.6.5
+    cd ~
+    rm -rf  Python-3.6.5  Python-3.6.5.tgz
+
+  Install OCI CLI Tool
+
+    bash -c "$(curl -L https://raw.githubusercontent.com/oracle/oci-cli/master/scripts/install/install.sh)"
+      -- accept defaults and Y
+
+    cd /home/opc/.oci
+
+    When the API Key is created there is a fingerprint and associated configuration file.
+    Save the keys and move them to the .oci directory. The following uses someAdmin@domain.gov API Key of OCI Admin User
+
+    vi config
+       [DEFAULT]
+       user=ocid1.user.oc2..xxxxyyyyzzzzaaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkklll
+       fingerprint=xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx:xx
+       key_file=/home/opc/.oci/oci_api_key.pem
+       tenancy=ocid1.tenancy.oc2..xxxxyyyyzzzzaaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkklll
+       region=us-langley-1
+
+    vi oci_api_key.pem
+       -----BEGIN RSA PRIVATE KEY-----
+       MIIEpAIBAAKCAQEAuUU/NZX8cLS0r25s0FU4bhrcxT+NBa61TjAJsI66yyMW/uWv
+       :
+       sCZe6tsku/F8Q6/TdgFQJ8MjUrZ6pMuH3C4Pt972vcVvDO1Wj+6wRQ==
+       -----END RSA PRIVATE KEY-----
+
+    vi oci_api_key_public.pem
+       -----BEGIN PUBLIC KEY-----
+       MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuUU/NZX8cLS0r25s0FU4
+       :
+       xQIDAQAB
+       -----END PUBLIC KEY-----
+
+    chmod 600 *
+
+  Test OCI CLI Tool
+
+    oci iam availability-domain list
+    {
+      "data": [
+        {
+          "compartment-id": "ocid1.tenancy.oc2..xxxxyyyyzzzzaaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkklll",
+          "id": "ocid1.availabilitydomain.oc2..xxxxyyyyzzzzaaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkklll",
+          "name": "AWAb:us-langley-1-ad-1"
+        }
+      ]
+    }
+
+    oci os ns get --compartment-id=ocid1.tenancy.oc2..xxxxyyyyzzzzaaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkklll
+    {
+      "data": "inlpilot"
+    }
+
+  Install Docker Engine and Test
+
+    cd ~
+    yum install docker-engine
+    systemctl start docker
+    systemctl enable docker
+    systemctl status docker
+    docker run hello-world
+    docker ps
+
+  Install Docker Compose (ref https://docs.docker.com/compose/install/)
+
+    curl -L "https://github.com/docker/compose/releases/download/1.28.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    chmod +x /usr/local/bin/docker-compose
+    docker-compose --version
+
+  Install GitHub Host Keys
+
+    cd ~/.ssh
+    vi known_hosts (carriage returns and whitespace needs to be removed)
+      github.com,xxx.xx.xx.xx ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAq2A7hRGmdnm9tUDbO9IDS
+      :
+      jE3JEAvGq3lGHSZXy28G3skua2SmVi/w4yCE6gbODqnTWlg7+wC604ydGXA8VJiS5ap43JXiUFFAaQ==
+
+  Create Local OKIT Repo for Docker Build
+
+    cd / ; mkdir okit ; cd okit
+    git clone -b v0.17.0 --depth 1 https://github.com/oracle/oci-designer-toolkit.git
+
+  Install GitHub Key and OCI Config for OKIT
+
+    cp ~/.oci/* /okit/oci-designer-toolkit/containers/oci
+    rm /okit/oci-designer-toolkit/containers/oci/example_config
+    cp ~/.ssh/* /okit/oci-designer-toolkit/containers/ssh
+    rm /okit/oci-designer-toolkit/containers/ssh/example_config
+
+  Build OKIT and Startup Docker Container
+
+    cd /okit/oci-designer-toolkit/containers/docker
+    docker-compose up --detach
+    docker-compose top
+
+  Stop OKIT and Remove Docker Build
+
+    cd /okit/oci-designer-toolkit/containers/docker
+    docker-compose stop
+    docker-compose rm
+    docker rmi okit
+
+  Other Commands
+
+    cd /root/oci-designer-toolkit/containers/docker
+    docker-compose build
+    docker-compose start
+    docker-compose top
+
+  Browser
+
+    localhost:localport/okit/designer
+    After rebuild, should clear browser history
+
+OTHER (In OCI > Identity)
+
+  Create the OKITInstanceGroup Dynamic Group
+
+    -- Add a single Rule relating to the OKIT
+
+  Create the OKITInstancePrincipal Policy
+
+    -- Add either the Query or Resource Manager 
+
+    -- Query
+       Allow dynamic-group OKITInstanceGroup to read all-resources in tenancy
+       Allow dynamic-group OKITInstanceGroup to use instances in tenancy
+
+    -- Resource Manager
+       Allow dynamic-group OKITInstanceGroup to manage orm-stacks in tenancy
+       Allow dynamic-group OKITInstanceGroup to manage orm-jobs in tenancy
+       Allow dynamic-group OKITInstanceGroup to manage all-resources in tenancy
+
+TO MAKE OKIT WORK WITH US GOV TENANCY
+
+I found four additional files with oraclecloud hard-coded (didn't change them at this time).
+
+       /okit/oci-designer-toolkit/okitweb/templates/reference_architecture/sql_server.json
+       /okit/oci-designer-toolkit/visualiser/model/bom.py
+       /okit/oci-designer-toolkit/visualiser/model/calculator.py
+       /okit/oci-designer-toolkit/visualiser/model/okit_price_v2.py
+
+Summary of my changes to make Resource Manager, Connection, and Console work with US Govt tenancy
+
+1.	Change key file to use ~/.okit vs absolute path
+
+       First vi /root/.oci/config and make the above change
+       Then cp /root/.oci/config /okit/oci-designer-toolkit/containers/oci/config
+
+2.	added regions to (top) of /okit/oci-designer-toolkit/okitweb/static/okit/json/dropdown.json
+
+       {
+       "display_name": "US Gov East",
+       "id": "us-langley-1",
+       "key": "LFI",
+       "name": "us-langley-1"
+       },
+       {
+       "display_name": "US Gov West",
+       "id": "us-luke-1",
+       "key": "LUI",
+       "name": "us-luke-1"
+       },
+
+3.	Changed "oci_href" in js/okit_designer.js to include gov
+
+       let oci_href = https://console.${jsonBody.name}.oraclegovcloud.com;
+
+4.	Destroy | Rebuild
+
+       destroyed old docker build with cd /okit/oci-designer-toolkit/containers/docker ; docker-compose stop ; docker-compose rm ; docker rmi okit
+       make a new docker build with docker-compose up --detach ; docker-compose top
+
+5.	Clear Browser history
