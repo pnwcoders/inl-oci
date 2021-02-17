@@ -1,0 +1,55 @@
+{
+  "title": "test",
+  "description": "# Description\n__Created 2021-2-17 12:9:52__\n\n--------------------------------------\n\n",
+  "created": "2021-2-17 12:9:52",
+  "updated": "2021-2-17 12:10:38",
+  "okit_version": "0.17.0",
+  "compartments": [
+    {
+      "id": "okit.compartment.da42ad0b-d1f5-43b3-81cc-9bcb3cd5fb4a",
+      "compartment_id": null,
+      "display_name": "okit-comp001",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "description": "okit-comp001"
+    }
+  ],
+  "customer_premise_equipments": [],
+  "autonomous_databases": [],
+  "block_storage_volumes": [],
+  "database_systems": [],
+  "dynamic_routing_gateways": [],
+  "fast_connects": [],
+  "file_storage_systems": [],
+  "instances": [],
+  "instance_pools": [],
+  "internet_gateways": [],
+  "ipsec_connections": [],
+  "load_balancers": [],
+  "local_peering_gateways": [],
+  "mysql_database_systems": [],
+  "nat_gateways": [],
+  "network_security_groups": [],
+  "object_storage_buckets": [],
+  "oke_clusters": [],
+  "remote_peering_connections": [],
+  "route_tables": [],
+  "security_lists": [],
+  "service_gateways": [],
+  "subnets": [],
+  "virtual_cloud_networks": [
+    {
+      "id": "okit.virtualcloudnetwork.7edba902-d25b-444a-9871-d05e9ae6e7bb",
+      "compartment_id": "okit.compartment.da42ad0b-d1f5-43b3-81cc-9bcb3cd5fb4a",
+      "display_name": "okit-vcn001",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "cidr_block": "192.168.0.0/16",
+      "dns_label": "vcn001",
+      "is_ipv6enabled": false,
+      "ipv6cidr_block": ""
+    }
+  ]
+}
