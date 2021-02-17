@@ -4,4 +4,5 @@ The INL OCI repository contains the files required to build out (or terraform) t
 Repository Organization
 
   Documentation - Critical information documenting the entire process
+  
   IaC - Infrastructure as Code
