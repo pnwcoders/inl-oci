@@ -1,43 +1,32 @@
 {
-  "title": "INL Non Prod Infrastructure",
-  "description": "INL Non Prod Infrastructure",
-  "created": "2021-2-22 14:2:27",
-  "updated": "2021-2-22 14:2:56",
+  "title": "Queried Compartment nonprod and Sub-Compartments",
+  "description": "Queried Compartment nonprod and Sub-Compartments in Region us-langley-1",
+  "created": "2021-2-26 9:11:5",
+  "updated": "2021-2-26 9:11:32",
   "okit_version": "0.17.0",
   "compartments": [
     {
-      "id": "ocid1.tenancy.oc2..aaaaaaaae4bl4jqo5hadyn4q3m6p3oxovbqts6e5kcgrnuc2qdbokgerkm2q",
+      "id": "ocid1.compartment.oc2..aaaaaaaagwp323wzph25mjy7vglyrutqvxfp4daycl4chdbykcrlrribhzvq",
       "compartment_id": null,
-      "display_name": "inlpilot",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "description": "inlpilot",
-      "is_accessible": true,
-      "lifecycle_state": "ACTIVE",
-      "time_created": "2021-01-04T15:15:43.432000+00:00"
-    },
-    {
-      "id": "ocid1.compartment.oc2..aaaaaaaafbbyhmwmmdgafoongwra5k5mvkfw3bm3y7ztfygt4niytwavjfka",
-      "compartment_id": "ocid1.tenancy.oc2..aaaaaaaae4bl4jqo5hadyn4q3m6p3oxovbqts6e5kcgrnuc2qdbokgerkm2q",
       "display_name": "nonprod",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
       "description": "Non-Prod Compartment",
+      "is_accessible": true,
       "lifecycle_state": "ACTIVE",
-      "time_created": "2021-02-22T17:08:49.701000+00:00"
+      "time_created": "2021-02-23T16:15:53.864000+00:00"
     },
     {
-      "id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaafbbyhmwmmdgafoongwra5k5mvkfw3bm3y7ztfygt4niytwavjfka",
+      "id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaagwp323wzph25mjy7vglyrutqvxfp4daycl4chdbykcrlrribhzvq",
       "display_name": "network_nonprod",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
       "description": "Holds production Network",
       "lifecycle_state": "ACTIVE",
-      "time_created": "2021-02-22T17:08:58.027000+00:00"
+      "time_created": "2021-02-23T16:16:05.050000+00:00"
     }
   ],
   "customer_premise_equipments": [],
@@ -54,233 +43,117 @@
   "load_balancers": [],
   "local_peering_gateways": [
     {
-      "id": "ocid1.localpeeringgateway.oc2.us-langley-1.aaaaaaaariyh7rqfhx3o6wzqi2wid6paietfxtksqaszpfonmnsnafoccfsa",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdlpg-phxinlsslpg",
+      "id": "ocid1.localpeeringgateway.oc2.us-langley-1.aaaaaaaagu2wwbpc5x6p6uwzmwxmmw6wuouw7x4uvqirwo2koim2l4a2spsa",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdlpg-ashinlsslpg",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "route_table_id": "",
       "peer_id": "",
       "is_cross_tenancy_peering": false,
       "lifecycle_state": "AVAILABLE",
       "peering_status": "NEW",
       "peering_status_details": "Not connected to a peer.",
-      "time_created": "2021-02-22T17:09:05.116000+00:00"
+      "time_created": "2021-02-26T16:09:48.185000+00:00"
     }
   ],
   "mysql_database_systems": [],
-  "nat_gateways": [
-    {
-      "id": "ocid1.natgateway.oc2.us-langley-1.aaaaaaaau754jt5axaoty3flntrgkyw56bjxwzczq4su4ua2hctmil3xirba",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdnat",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "block_traffic": false,
-      "lifecycle_state": "AVAILABLE",
-      "nat_ip": "139.87.73.250",
-      "public_ip_id": "ocid1.publicip.oc2.us-langley-1.aaaaaaaarxm7zjjsvgtiqegdh554a5kn7v546dfh7f7tzpxz6nctz5qivtmq",
-      "time_created": "2021-02-22T17:09:05.901000+00:00"
-    }
-  ],
+  "nat_gateways": [],
   "network_security_groups": [],
   "object_storage_buckets": [],
   "oke_clusters": [],
   "remote_peering_connections": [],
   "route_tables": [
     {
-      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaamzwyxaknpryk5xsdf47bj7cqgi2gwl5rhldwnd2hbxaxjj5uecia",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb-rt",
+      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaa6cqsftj35fo7crn2oocecmuagtfxaannh2ag7gu7wreukamaif3q",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb-rt",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "route_rules": [],
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "route_rules": [
+        {
+          "description": "Nonprod to SharedServices",
+          "destination": "10.3.0.0/16",
+          "destination_type": "CIDR_BLOCK",
+          "network_entity_id": "ocid1.localpeeringgateway.oc2.us-langley-1.aaaaaaaagu2wwbpc5x6p6uwzmwxmmw6wuouw7x4uvqirwo2koim2l4a2spsa",
+          "target_type": "local_peering_gateways"
+        }
+      ],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.083000+00:00"
+      "time_created": "2021-02-26T16:09:49.310000+00:00"
     },
     {
-      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaah4ikl5dfwu2ettdcwp25gfzwmketu3zqs2me5lekmdq3pjkopqaq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp-rt",
+      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaawfiah7lq5gvqum55d6h6k4qd5eedlsojuilygkjpuxakgtcmzfdq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp-rt",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "route_rules": [],
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "route_rules": [
+        {
+          "description": "Nonprod to SharedServices",
+          "destination": "10.3.0.0/16",
+          "destination_type": "CIDR_BLOCK",
+          "network_entity_id": "ocid1.localpeeringgateway.oc2.us-langley-1.aaaaaaaagu2wwbpc5x6p6uwzmwxmmw6wuouw7x4uvqirwo2koim2l4a2spsa",
+          "target_type": "local_peering_gateways"
+        }
+      ],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.027000+00:00"
+      "time_created": "2021-02-26T16:09:49.292000+00:00"
     },
     {
-      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaazdyxk5enpmck5yxvzycepgfg6wivrn2wjmwhoc62tirovcn3on2a",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub-rt",
+      "id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaanbw5r3zrbkktihnk7akd227kxngo77tuqi7xzffbyakwkh5xecia",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprd-rt",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "route_rules": [],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.244000+00:00"
+      "time_created": "2021-02-26T16:09:47.319000+00:00"
     }
   ],
   "security_lists": [
     {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaohvbpgqbnibbxvcy27kflht2o6qxvlxbqe2z3qwxzirkkj56ocma",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb-4",
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaav4l7th3wi4ugpzceb2fqk3x6ojwljq5rglelpv3ul7l3qgsxh7cq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb-3",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "egress_security_rules": [],
       "ingress_security_rules": [],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:06.539000+00:00"
+      "time_created": "2021-02-26T16:09:49.140000+00:00"
     },
     {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa5fltagkid5lprb37zpjlwruflqcff7v2ink6a5z3avxwjqr6h4ka",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb-3",
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawg66laoep7rdw6wq2hhkuju3pwhd3roma5zsbbpij7mly6zty37a",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp-2",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "egress_security_rules": [],
       "ingress_security_rules": [],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:06.435000+00:00"
+      "time_created": "2021-02-26T16:09:49.064000+00:00"
     },
     {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaap3665ap4skw27z3tx34unm5gchlnxpqmgjpu7hpblilv5ch7unrq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp-1",
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaohoui73jmrqv5vcgbgi2jc7iqukkbfc23mgnxqgwbcmn77ah7sna",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprd-gbl",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [
-        {
-          "destination": "10.2.2.0/25",
-          "destination_type": "CIDR_BLOCK",
-          "is_stateless": false,
-          "protocol": "6",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 1521,
-              "min": 1521
-            }
-          }
-        }
-      ],
-      "ingress_security_rules": [
-        {
-          "is_stateless": false,
-          "protocol": "6",
-          "source": "10.2.2.0/25",
-          "source_type": "CIDR_BLOCK",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 1521,
-              "min": 1521
-            }
-          }
-        }
-      ],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.931000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawx27h5eetr4kt5sxzs4io5lri2xxix757raso2pugtptvloimhma",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb-2",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.825000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaa3ogg46oiavilwt3awuu2nawmivevivc2dr4ipuoyagve4tljgca",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub-4",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.740000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaq5ogtckl5gvp6vuhrm5zt2cjk6muwosdhsv3gpjuztxgpjok5tya",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb-1",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [
-        {
-          "destination": "10.2.2.0/25",
-          "destination_type": "CIDR_BLOCK",
-          "is_stateless": false,
-          "protocol": "6",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 1521,
-              "min": 1521
-            }
-          }
-        }
-      ],
-      "ingress_security_rules": [
-        {
-          "is_stateless": false,
-          "protocol": "6",
-          "source": "10.2.3.0/25",
-          "source_type": "CIDR_BLOCK",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 1521,
-              "min": 1521
-            }
-          }
-        }
-      ],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.644000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaabyud6vczofk4bryh54qe72uzdz25g4ad5swlvyuh3xqebzcmjgwq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp-3",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.455000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa4xm7vqn4vu6fh7zpznh52dki35bzi3shbwke3wsmxhjqrpyt7sra",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprd-gbl",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "egress_security_rules": [],
       "ingress_security_rules": [
         {
@@ -405,90 +278,26 @@
         }
       ],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.320000+00:00"
+      "time_created": "2021-02-26T16:09:48.801000+00:00"
     },
     {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaarbdy7jzx4ooz2cgieffamwemd5ykxsxs3oth2wfuubvo6jv3q7fq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub-3",
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaasyn5v6jovruvvsbui6auzgpyzvbg2zctupygwudmeitp67vu56qa",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp-1",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:05.232000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaejladrq7tjsbf43uiy6yc6lxcuobpgwwuxactgmy4flmlwnd6psq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp-4",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.967000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaav2ofey6leg3optmbpx2hg6psa56p63fwjy66ha5hdod5b4l52plq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub-2",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.892000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaicgubbrstvvf7w7xz4sdbzqzbs37nn7n4mmuetroztoacie3fjmq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp-2",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "egress_security_rules": [],
-      "ingress_security_rules": [],
-      "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.876000+00:00"
-    },
-    {
-      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaays46m2f5cx4hpjoatlwjprmbuuc37jhnz4gxofi4vhw6kplc5fxa",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub-1",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "egress_security_rules": [
         {
-          "destination": "0.0.0.0/0",
+          "destination": "10.2.2.0/25",
           "destination_type": "CIDR_BLOCK",
           "is_stateless": false,
           "protocol": "6",
           "tcp_options": {
             "destination_port_range": {
-              "max": 80,
-              "min": 80
-            }
-          }
-        },
-        {
-          "destination": "0.0.0.0/0",
-          "destination_type": "CIDR_BLOCK",
-          "is_stateless": false,
-          "protocol": "6",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 443,
-              "min": 443
+              "max": 1521,
+              "min": 1521
             }
           }
         }
@@ -497,41 +306,120 @@
         {
           "is_stateless": false,
           "protocol": "6",
-          "source": "0.0.0.0/0",
+          "source": "10.2.2.0/25",
           "source_type": "CIDR_BLOCK",
           "tcp_options": {
             "destination_port_range": {
-              "max": 443,
-              "min": 443
-            }
-          }
-        },
-        {
-          "is_stateless": false,
-          "protocol": "6",
-          "source": "0.0.0.0/0",
-          "source_type": "CIDR_BLOCK",
-          "tcp_options": {
-            "destination_port_range": {
-              "max": 80,
-              "min": 80
+              "max": 1521,
+              "min": 1521
             }
           }
         }
       ],
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.244000+00:00"
+      "time_created": "2021-02-26T16:09:48.696000+00:00"
+    },
+    {
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaerxvkgiy2izolg4wuhvuuz2oc3g4cyjizikklvqhjqqenpvf4j4a",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb-4",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "egress_security_rules": [],
+      "ingress_security_rules": [],
+      "lifecycle_state": "AVAILABLE",
+      "time_created": "2021-02-26T16:09:48.569000+00:00"
+    },
+    {
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaahalzpx6gq6b7ndsb57dsro26ynut6ji56imgy73pjvbmexefkpya",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb-2",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "egress_security_rules": [],
+      "ingress_security_rules": [],
+      "lifecycle_state": "AVAILABLE",
+      "time_created": "2021-02-26T16:09:48.156000+00:00"
+    },
+    {
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa6fcxnftowjekt6e7q6oeqxirn3kb76ltlc7ptkdl6ohfxs2qtcja",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp-3",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "egress_security_rules": [],
+      "ingress_security_rules": [],
+      "lifecycle_state": "AVAILABLE",
+      "time_created": "2021-02-26T16:09:48.060000+00:00"
+    },
+    {
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaak5aumnsfvhcx5ozliknb5vwwlurki4bbnk6yrf2uarekppfkio3q",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp-4",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "egress_security_rules": [],
+      "ingress_security_rules": [],
+      "lifecycle_state": "AVAILABLE",
+      "time_created": "2021-02-26T16:09:47.893000+00:00"
+    },
+    {
+      "id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawe7d6q43iqb2uggd4iqclg6hie5d76k5j2lryhihdzazliwczboq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb-1",
+      "definition": "",
+      "freeform_tags": {},
+      "defined_tags": {},
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "egress_security_rules": [
+        {
+          "destination": "10.2.2.0/25",
+          "destination_type": "CIDR_BLOCK",
+          "is_stateless": false,
+          "protocol": "6",
+          "tcp_options": {
+            "destination_port_range": {
+              "max": 1521,
+              "min": 1521
+            }
+          }
+        }
+      ],
+      "ingress_security_rules": [
+        {
+          "is_stateless": false,
+          "protocol": "6",
+          "source": "10.2.3.0/25",
+          "source_type": "CIDR_BLOCK",
+          "tcp_options": {
+            "destination_port_range": {
+              "max": 1521,
+              "min": 1521
+            }
+          }
+        }
+      ],
+      "lifecycle_state": "AVAILABLE",
+      "time_created": "2021-02-26T16:09:47.319000+00:00"
     }
   ],
   "service_gateways": [
     {
-      "id": "ocid1.servicegateway.oc2.us-langley-1.aaaaaaaauhztagwje3zenjgad5bo5bedrg73zwes43qlzzpnkkyx2rnm2ixq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdsgw",
+      "id": "ocid1.servicegateway.oc2.us-langley-1.aaaaaaaavyyl5sd5euoy74x74giiiponfem74nntwdxgxvf4nw7ga4l5usmq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdsgw",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "service_name": "OCI",
       "autonomous_database_ids": [],
       "object_storage_bucket_ids": [],
@@ -544,116 +432,87 @@
           "service_name": "OCI LFI Object Storage"
         }
       ],
-      "time_created": "2021-02-22T17:09:05.510000+00:00"
+      "time_created": "2021-02-26T16:09:48.581000+00:00"
     }
   ],
   "subnets": [
     {
-      "id": "ocid1.subnet.oc2.us-langley-1.aaaaaaaahm2yamysl6ztc5ws2o4e2tlplnidnyapnskng4uxmwrsj4vdnvea",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprddb",
+      "id": "ocid1.subnet.oc2.us-langley-1.aaaaaaaamz5s2moydgpjcnl6pv5xq76wecckgzdeu33t6gvys53lmtihumdq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprdapp",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
       "cidr_block": "10.2.2.0/25",
-      "dns_label": "phxinlnprddb",
+      "dns_label": "ashinlprdapp",
       "prohibit_public_ip_on_vnic": true,
-      "route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaamzwyxaknpryk5xsdf47bj7cqgi2gwl5rhldwnd2hbxaxjj5uecia",
+      "route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaawfiah7lq5gvqum55d6h6k4qd5eedlsojuilygkjpuxakgtcmzfdq",
       "security_list_ids": [
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa5fltagkid5lprb37zpjlwruflqcff7v2ink6a5z3avxwjqr6h4ka",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaq5ogtckl5gvp6vuhrm5zt2cjk6muwosdhsv3gpjuztxgpjok5tya",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa4xm7vqn4vu6fh7zpznh52dki35bzi3shbwke3wsmxhjqrpyt7sra",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaohvbpgqbnibbxvcy27kflht2o6qxvlxbqe2z3qwxzirkkj56ocma",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawx27h5eetr4kt5sxzs4io5lri2xxix757raso2pugtptvloimhma"
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaohoui73jmrqv5vcgbgi2jc7iqukkbfc23mgnxqgwbcmn77ah7sna",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaak5aumnsfvhcx5ozliknb5vwwlurki4bbnk6yrf2uarekppfkio3q",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaasyn5v6jovruvvsbui6auzgpyzvbg2zctupygwudmeitp67vu56qa",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawg66laoep7rdw6wq2hhkuju3pwhd3roma5zsbbpij7mly6zty37a",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa6fcxnftowjekt6e7q6oeqxirn3kb76ltlc7ptkdl6ohfxs2qtcja"
       ],
       "availability_domain": "0",
       "is_ipv6enabled": false,
       "ipv6cidr_block": "",
-      "dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaagwloc3xd3wuln66rca2i52wczdp6oeewgtfwrq6bndmt64lovn3a",
+      "dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaaiu3tqi2fgsyivgc5jaenqt32jtogybcszylbp5433b3ac5ol7rlq",
       "lifecycle_state": "AVAILABLE",
-      "subnet_domain_name": "phxinlnprddb.phxinlnprd.oraclevcn.com",
-      "time_created": "2021-02-22T17:09:07.614000+00:00",
+      "subnet_domain_name": "ashinlprdapp.ashinlnprd.oraclevcn.com",
+      "time_created": "2021-02-26T16:09:52.629000+00:00",
       "virtual_router_ip": "10.2.2.1",
-      "virtual_router_mac": "00:00:17:92:F9:02"
+      "virtual_router_mac": "00:00:17:06:0B:DA"
     },
     {
-      "id": "ocid1.subnet.oc2.us-langley-1.aaaaaaaajw42sanztivmmvnpc5hhilufqifrj2wsa2zhhu7tw7tc73pfppqa",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdapp",
+      "id": "ocid1.subnet.oc2.us-langley-1.aaaaaaaaczelp5mlmdzcw75kk7eb3sl4ku3tt4kll3zcbpe5ddfizooqp5ba",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprddb",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "cidr_block": "10.2.3.0/27",
-      "dns_label": "phxinlnprdapp",
+      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "cidr_block": "10.2.1.0/25",
+      "dns_label": "ashinlprddb",
       "prohibit_public_ip_on_vnic": true,
-      "route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaah4ikl5dfwu2ettdcwp25gfzwmketu3zqs2me5lekmdq3pjkopqaq",
+      "route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaa6cqsftj35fo7crn2oocecmuagtfxaannh2ag7gu7wreukamaif3q",
       "security_list_ids": [
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaejladrq7tjsbf43uiy6yc6lxcuobpgwwuxactgmy4flmlwnd6psq",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaicgubbrstvvf7w7xz4sdbzqzbs37nn7n4mmuetroztoacie3fjmq",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaabyud6vczofk4bryh54qe72uzdz25g4ad5swlvyuh3xqebzcmjgwq",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa4xm7vqn4vu6fh7zpznh52dki35bzi3shbwke3wsmxhjqrpyt7sra",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaap3665ap4skw27z3tx34unm5gchlnxpqmgjpu7hpblilv5ch7unrq"
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawe7d6q43iqb2uggd4iqclg6hie5d76k5j2lryhihdzazliwczboq",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaohoui73jmrqv5vcgbgi2jc7iqukkbfc23mgnxqgwbcmn77ah7sna",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaahalzpx6gq6b7ndsb57dsro26ynut6ji56imgy73pjvbmexefkpya",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaerxvkgiy2izolg4wuhvuuz2oc3g4cyjizikklvqhjqqenpvf4j4a",
+        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaav4l7th3wi4ugpzceb2fqk3x6ojwljq5rglelpv3ul7l3qgsxh7cq"
       ],
       "availability_domain": "0",
       "is_ipv6enabled": false,
       "ipv6cidr_block": "",
-      "dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaagwloc3xd3wuln66rca2i52wczdp6oeewgtfwrq6bndmt64lovn3a",
+      "dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaaiu3tqi2fgsyivgc5jaenqt32jtogybcszylbp5433b3ac5ol7rlq",
       "lifecycle_state": "AVAILABLE",
-      "subnet_domain_name": "phxinlnprdapp.phxinlnprd.oraclevcn.com",
-      "time_created": "2021-02-22T17:09:07.253000+00:00",
-      "virtual_router_ip": "10.2.3.1",
-      "virtual_router_mac": "00:00:17:92:F9:02"
-    },
-    {
-      "id": "ocid1.subnet.oc2.us-langley-1.aaaaaaaa3bl6txbwl3z6dudsqwj26cdkrf3bc7zov5svzhj7k24xeyiga5va",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprdpub",
-      "definition": "",
-      "freeform_tags": {},
-      "defined_tags": {},
-      "vcn_id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "cidr_block": "10.2.1.0/29",
-      "dns_label": "phxinlnprdpub",
-      "prohibit_public_ip_on_vnic": false,
-      "route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaazdyxk5enpmck5yxvzycepgfg6wivrn2wjmwhoc62tirovcn3on2a",
-      "security_list_ids": [
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaaa3ogg46oiavilwt3awuu2nawmivevivc2dr4ipuoyagve4tljgca",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaays46m2f5cx4hpjoatlwjprmbuuc37jhnz4gxofi4vhw6kplc5fxa",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaav2ofey6leg3optmbpx2hg6psa56p63fwjy66ha5hdod5b4l52plq",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaa4xm7vqn4vu6fh7zpznh52dki35bzi3shbwke3wsmxhjqrpyt7sra",
-        "ocid1.securitylist.oc2.us-langley-1.aaaaaaaarbdy7jzx4ooz2cgieffamwemd5ykxsxs3oth2wfuubvo6jv3q7fq"
-      ],
-      "availability_domain": "0",
-      "is_ipv6enabled": false,
-      "ipv6cidr_block": "",
-      "dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaagwloc3xd3wuln66rca2i52wczdp6oeewgtfwrq6bndmt64lovn3a",
-      "lifecycle_state": "AVAILABLE",
-      "subnet_domain_name": "phxinlnprdpub.phxinlnprd.oraclevcn.com",
-      "time_created": "2021-02-22T17:09:07.007000+00:00",
+      "subnet_domain_name": "ashinlprddb.ashinlnprd.oraclevcn.com",
+      "time_created": "2021-02-26T16:09:50.692000+00:00",
       "virtual_router_ip": "10.2.1.1",
-      "virtual_router_mac": "00:00:17:92:F9:02"
+      "virtual_router_mac": "00:00:17:06:0B:DA"
     }
   ],
   "virtual_cloud_networks": [
     {
-      "id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byarxz7gjwagcynslkel6kkr7357g3z3lmxl7jbf6rqmbzq",
-      "compartment_id": "ocid1.compartment.oc2..aaaaaaaaxikjsiea6sf7htf5x52omvo3rnln3bugf7o3qv6ewwslo3attwaa",
-      "display_name": "phxinlnprd",
+      "id": "ocid1.vcn.oc2.us-langley-1.amaaaaaalzt72byan7kbqt2j6i2mxa6yyxqiqak34g5s2s6u3ogehjnjfyoq",
+      "compartment_id": "ocid1.compartment.oc2..aaaaaaaal37e5l7tu4yvqupv3cqnbbxdxcqw7hngfoh5t5lhaufbgun7rp7a",
+      "display_name": "ashinlnprd",
       "definition": "",
       "freeform_tags": {},
       "defined_tags": {},
       "cidr_block": "10.2.0.0/16",
-      "dns_label": "phxinlnprd",
+      "dns_label": "ashinlnprd",
       "is_ipv6enabled": false,
       "ipv6cidr_block": "",
-      "default_dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaagwloc3xd3wuln66rca2i52wczdp6oeewgtfwrq6bndmt64lovn3a",
-      "default_route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaazdyxk5enpmck5yxvzycepgfg6wivrn2wjmwhoc62tirovcn3on2a",
-      "default_security_list_id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaays46m2f5cx4hpjoatlwjprmbuuc37jhnz4gxofi4vhw6kplc5fxa",
+      "default_dhcp_options_id": "ocid1.dhcpoptions.oc2.us-langley-1.aaaaaaaaiu3tqi2fgsyivgc5jaenqt32jtogybcszylbp5433b3ac5ol7rlq",
+      "default_route_table_id": "ocid1.routetable.oc2.us-langley-1.aaaaaaaanbw5r3zrbkktihnk7akd227kxngo77tuqi7xzffbyakwkh5xecia",
+      "default_security_list_id": "ocid1.securitylist.oc2.us-langley-1.aaaaaaaawe7d6q43iqb2uggd4iqclg6hie5d76k5j2lryhihdzazliwczboq",
       "lifecycle_state": "AVAILABLE",
-      "time_created": "2021-02-22T17:09:04.244000+00:00",
-      "vcn_domain_name": "phxinlnprd.oraclevcn.com"
+      "time_created": "2021-02-26T16:09:47.319000+00:00",
+      "vcn_domain_name": "ashinlnprd.oraclevcn.com"
     }
   ]
 }
