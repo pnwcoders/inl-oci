@@ -1,0 +1,75 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+#
+# APPLIES TO THE FOLLOWING SERVERS
+#   ashinlssoms1 OMS Active
+#   ashinlssoms2 OMS Standby
+#   phxinlssoms1 D/R OMS Active
+#   phxinlssoms2 D/R OMS Standby
+#
+# The following entriers are required to map hostname.inlpilot.gov to oraclevcn.com
+# because EMCC and other client-server application connections use the scan and vip
+# names associated with inlpilot.gov whereas the databases, in particular Data Guard,
+# all use Oracle FQ domains. This list will need to be maintained whenever database
+# targets are added and removed (ip address change). It is recommended that this
+# list is placed under source control.
+#
+# ====================================================================================
+# EMCC DATABASES
+# ====================================================================================
+# OMR PRIMARY ------------------------------------------------------------------------
+  10.3.2.6   ashinlssomr-scan.ashinlssdb.ashinlss.oraclevcn.com ashinlssomr-scan
+  10.3.2.7   ashinlssomr-scan.ashinlssdb.ashinlss.oraclevcn.com ashinlssomr-scan
+  10.3.2.8   ashinlssomr-scan.ashinlssdb.ashinlss.oraclevcn.com ashinlssomr-scan
+  10.3.2.4   ashinlssomr1-vip.ashinlssdb.ashinlss.oraclevcn.com ashinlssomr1-vip
+  10.3.2.5   ashinlssomr2-vip.ashinlssdb.ashinlss.oraclevcn.com ashinlssomr2-vip
+#     STANDBY
+#
+# ====================================================================================
+# ALL DEV DATABASES
+# ====================================================================================
+# DEV1 PRIMARY -----------------------------------------------------------------------
+  10.2.1.19    ashdev1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com  ashdev1db-scan
+  10.2.1.86    ashdev1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com  ashdev1db-scan
+  10.2.1.120   ashdev1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com  ashdev1db-scan
+  10.2.1.49    ashdev1db1-vip.ashinlnprddb.ashinlnprd.oraclevcn.com  ashdev1db1-vip
+  10.2.1.58    ashdev1db2-vip.ashinlnprddb.ashinlnprd.oraclevcn.com  ashdev1db2-vip
+#      STANDBY
+  10.20.1.42   phxdev1db-scan.phxinlnprddb.phxinlnprd.oraclevcn.com  phxdev1db-scan
+  10.20.1.41   phxdev1db-scan.phxinlnprddb.phxinlnprd.oraclevcn.com  phxdev1db-scan
+  10.20.1.36   phxdev1db-scan.phxinlnprddb.phxinlnprd.oraclevcn.com  phxdev1db-scan
+  10.20.1.74   phxdev1db1-vip.phxinlnprddb.phxinlnprd.oraclevcn.com  phxdev1db1-vip
+  10.20.1.22   phxdev1db2-vip.phxinlnprddb.phxinlnprd.oraclevcn.com  phxdev1db2-vip
+# DEV2 PRIMARY -----------------------------------------------------------------------
+#      STANDBY
+# DEV3 PRIMARY -----------------------------------------------------------------------
+#      STANDBY
+# ====================================================================================
+# ALL TST DATABASES
+# ====================================================================================
+# TST1 PRIMARY -----------------------------------------------------------------------
+  10.2.1.26  ashtst1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst1db-scan
+  10.2.1.85  ashtst1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst1db-scan
+  10.2.1.67  ashtst1db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst1db-scan
+  10.2.1.12  ashtst1db1-vip.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst1db1-vip
+  10.2.1.125 ashtst1db2-vip.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst1db2-vip
+# TST1 STANDBY
+# TST2 PRIMARY -----------------------------------------------------------------------
+  10.2.1.71  ashtst2db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst2db-scan
+  10.2.1.2   ashtst2db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst2db-scan
+  10.2.1.105 ashtst2db-scan.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst2db-scan
+  10.2.1.66  ashtst2db1-vip.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst2db1-vip
+  10.2.1.82  ashtst2db2-vip.ashinlnprddb.ashinlnprd.oraclevcn.com ashtst2db2-vip
+# TST2 STANDBY
+# TST3 PRIMARY -----------------------------------------------------------------------
+# TST3 STANDBY
+# ====================================================================================
+# ALL PRD DATABASES
+# ====================================================================================
+# PRD1 PRIMARY -----------------------------------------------------------------------
+#      STANDBY
+# PRD2 PRIMARY -----------------------------------------------------------------------
+#      STANDBY
+# PRD3 PRIMARY -----------------------------------------------------------------------
+#      STANDBY
+#
